@@ -72,12 +72,20 @@
 
     #tarjeta {
       text-align: center;
-      padding: 20px;
+      padding: 0px;
       background-color: #ffffff;
+      background-image: url('img/1.png'),url('img/59.png'),url('img/60.png'),url('img/61.png'),url('img/62.png'),url('img/64.png'),url('img/59.png'),url('img/60.png');
+      background-position: 0% 0%, 0% 16%, 0% 35%,0% 45%,0 65%, 0% 80%, 0% 85%;
+            
+      /* No repetir las imágenes */
+      background-repeat: no-repeat;
+      
+      /* Mantener las proporciones de las imágenes */
+      background-size: contain;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       display: none; /* Inicialmente oculto */
-      margin: 20px; /* Ajusta el margen según tus necesidades */
+      margin: 30px; /* Ajusta el margen según tus necesidades */
       font-family: "Dancing Script", cursive;
       opacity: 0; /* Inicialmente oculto */
       transition: opacity 2s ease; /* Añade una transición suave a la opacidad */
@@ -504,6 +512,14 @@
         width: 100%;
     }
 
+    /* .container-img {
+      width: 100%;
+      background-image: url('img/64.png');; 
+      background-color: #ffffff;
+      background-size: 100px;
+      background-repeat: no-repeat, no-repeat,
+    } */
+
   </style>
 </head>
 <body>
@@ -523,6 +539,8 @@
 
         <div id="tarjeta">
 
+          <div class="container-img">
+
           <h3>Con la bendicicon de nuestros padres</h3>
           <div class="papas" style="width: 40vh">
             
@@ -537,6 +555,8 @@
                 <div>Miriam Zapata Garcia</div>
             </div>
         </div>
+
+      </div>
 
         <br>
 
@@ -706,24 +726,24 @@
         </div>
 
         <h1>Mapa</h1>
-        <img src="img/rutaw.jpeg">
+        <img src="img/mapa_trans.png">
 
           <h1>El gran dia</h1>
-            <img src="img/itinerariow.jpeg">
+            <img src="img/itinerario_trans.png">
 
 
 
            
             <br>
             <h1 class="codigo-vestuario">Código de vestuario</h1>
-            <img src="img/vestuariow.jpeg" class="img-codigo-vestuario">
+            <img src="img/vestuario_trans.png" class="img-codigo-vestuario">
 
             <h1>Regalo</h1>
-            <img src="img/regalow.jpeg" alt="regalo" class="regalo">
+            <img src="img/regalo_trans.png" alt="regalo" class="regalo">
 
 
             <h1>Importante</h1>
-            <img src="img/advertenciasw.jpeg" alt="advertencias" class="advertencias">
+            <img src="img/advertencias_trans.png" alt="advertencias" class="advertencias">
 
             <br>
             <br>
