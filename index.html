@@ -556,13 +556,32 @@
       background-repeat: no-repeat, no-repeat,
     } */
 
+    #mensaje3 {
+      margin: 1px;
+      font-family: "Alex Brush", cursive;
+      font-weight: 400;
+      font-style: normal;
+    }
+    #mensaje1 {
+      margin: 1px;
+    }
+    #mensaje2 {
+      margin: 1px;
+    }
+    #mensaje4 {
+      margin: 1px;
+    }
+
   </style>
 </head>
 <body>
     <div id="fondo">
 
         <div id="bienvenida">
-            <h1 id="mensaje"> </h1>
+            <h1 id="mensaje1"> </h1>
+            <h1 id="mensaje2"> </h1>
+            <h1 id="mensaje3"> </h1>
+            <h1 id="mensaje4"> </h1>
         </div>
 
         <div id="bienvenida_fija">
@@ -840,21 +859,63 @@
   <script>
     // Función para mostrar el mensaje letra por letra
     function mostrarMensaje() {
-      var mensaje = document.getElementById("mensaje");
-      var texto = "Bienvenidos a nuestra historia.\n\n Carolina Zuluaga \n&\n Julián Atehortúa";
-      var index = 0;
+            var mensaje1 = document.getElementById("mensaje1");
+            var mensaje2 = document.getElementById("mensaje2");
+            var mensaje3 = document.getElementById("mensaje3");
+            var mensaje4 = document.getElementById("mensaje4");
 
-      function mostrarSiguienteLetra() {
-        mensaje.textContent += texto[index];
-        index++;
+            var texto1 = "Bienvenidos a nuestra historia."; // Primer mensaje
+            var texto2 = "Carolina Zuluaga"; // Segundo mensaje
+            var texto3 = "&"; // Tercer mensaje
+            var texto4 = "Julián Atehortúa"; // Cuarto mensaje
 
-        if (index < texto.length) {
-          setTimeout(mostrarSiguienteLetra, 60); // Retardo de 100 milisegundos entre letras
+            var index1 = 0, index2 = 0, index3 = 0, index4 = 0;
+
+            // Función para mostrar el primer mensaje
+            function mostrarSiguienteLetra1() {
+                if (index1 < texto1.length) {
+                    mensaje1.textContent += texto1[index1];
+                    index1++;
+                    setTimeout(mostrarSiguienteLetra1, 60);
+                } else {
+                    mostrarSiguienteLetra2(); // Iniciar segundo mensaje
+                }
+            }
+
+            // Función para mostrar el segundo mensaje
+            function mostrarSiguienteLetra2() {
+                if (index2 < texto2.length) {
+                    mensaje2.textContent += texto2[index2];
+                    index2++;
+                    setTimeout(mostrarSiguienteLetra2, 60);
+                } else {
+                    mostrarSiguienteLetra3(); // Iniciar tercer mensaje
+                }
+            }
+
+            // Función para mostrar el tercer mensaje
+            function mostrarSiguienteLetra3() {
+                if (index3 < texto3.length) {
+                    mensaje3.textContent += texto3[index3];
+                    index3++;
+                    setTimeout(mostrarSiguienteLetra3, 60);
+                } else {
+                    mostrarSiguienteLetra4(); // Iniciar cuarto mensaje
+                }
+            }
+
+            // Función para mostrar el cuarto mensaje
+            function mostrarSiguienteLetra4() {
+                if (index4 < texto4.length) {
+                    mensaje4.textContent += texto4[index4];
+                    index4++;
+                    setTimeout(mostrarSiguienteLetra4, 60);
+                }
+            }
+
+            // Iniciar la animación del primer mensaje
+            mostrarSiguienteLetra1();
         }
-      }
-
-      mostrarSiguienteLetra();
-    }
 
     // Función para mostrar la bienvenida y luego la tarjeta
     function mostrarBienvenida() {
